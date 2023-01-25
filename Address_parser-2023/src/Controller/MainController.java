@@ -29,7 +29,6 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
         parser = new Parser();
     }
 
@@ -37,19 +36,17 @@ public class MainController implements Initializable {
 
         try {
             address = parser.parse(inputField.getText());
-            
             street.setText(address.getStreetName());
-            number.setText(""+address.getHouseNumber());
-            postalcode.setText(""+address.getPostalCode());
+            number.setText("" + address.getHouseNumber());
+            postalcode.setText("" + address.getPostalCode());
             city.setText(address.getCityName());
         } catch (NoMatchException e) {
             System.out.println(e.getMessage());
-            inputField.setText(e.getMessage());
+            inputField.setPromptText(e.getMessage());
         } catch (NullPointerException e) {
-            inputField.setText("no input!");
+            inputField.setPromptText("no input!");
         }
 
-       
     }
 
 }
