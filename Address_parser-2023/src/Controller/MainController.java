@@ -36,15 +36,16 @@ public class MainController implements Initializable {
 
         try {
             address = parser.parse(inputField.getText());
+
             street.setText(address.getStreetName());
             number.setText("" + address.getHouseNumber());
             postalcode.setText("" + address.getPostalCode());
             city.setText(address.getCityName());
         } catch (NoMatchException e) {
             System.out.println(e.getMessage());
-            inputField.setPromptText(e.getMessage());
+            inputField.setText(e.getMessage());
         } catch (NullPointerException e) {
-            inputField.setPromptText("no input!");
+            inputField.setText("no input!");
         }
 
     }
