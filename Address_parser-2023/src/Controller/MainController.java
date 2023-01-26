@@ -35,17 +35,22 @@ public class MainController implements Initializable {
     public void upddateAddress(ActionEvent event) {
 
         try {
-            address = parser.parse(inputField.getText());
 
+            address = parser.parse(inputField.getText());
             street.setText(address.getStreetName());
             number.setText("" + address.getHouseNumber());
             postalcode.setText("" + address.getPostalCode());
             city.setText(address.getCityName());
+
         } catch (NoMatchException e) {
+
             System.out.println(e.getMessage());
             inputField.setText(e.getMessage());
+
         } catch (NullPointerException e) {
+
             inputField.setText("no input!");
+
         }
 
     }

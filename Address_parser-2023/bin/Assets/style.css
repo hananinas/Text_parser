@@ -1,8 +1,7 @@
-.text{
-    -fx-text-fill: green;
-    -fx-font-famil: Comic Sans MS;
-}
-
 .background{
     -fx-background-color: #015958;
+}
+
+.buotton-background{
+    -fx-background-color: yellow;
 }
