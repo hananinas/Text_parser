@@ -6,12 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Address_parser-2023_f64ae868"
+        },
+        {
+            "type": "java",
             "name": "Launch test",
             "request": "launch",
             "mainClass": "test",
             "projectName": "Address_parser-2023_f64ae868",
             "vmArgs": "--module-path C:/java/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml"
-
         },
         {
             "name": "Java",
@@ -40,7 +46,6 @@
             ],
             "externalConsole": true,
             "vmArgs": "--module-path C:/java/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml"
-
         },
         {
             "type": "java",
